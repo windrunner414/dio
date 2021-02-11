@@ -987,8 +987,7 @@ abstract class DioMixin implements Dio {
     var data = options.data;
     List<int> bytes;
     Stream<List<int>> stream;
-    if (data != null &&
-        ['POST', 'PUT', 'PATCH', 'DELETE'].contains(options.method)) {
+    if (data != null) {
       // Handle the FormData
       int length;
       if (data is Stream) {
