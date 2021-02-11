@@ -55,7 +55,7 @@ class DefaultHttpClientAdapter implements HttpClientAdapter {
     request.followRedirects = options.followRedirects;
     request.maxRedirects = options.maxRedirects;
 
-    if (options.method != 'GET' && requestStream != null) {
+    if (requestStream != null) {
       // Transform the request data
       await request.addStream(requestStream);
     }
